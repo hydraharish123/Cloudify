@@ -66,6 +66,7 @@ const curPosition = function () {
         })
         .then((data) => {
           // console.log(data);
+
           getResults(data.city);
         })
         .catch((err) => {
@@ -76,6 +77,8 @@ const curPosition = function () {
       renderError();
     }
   );
+
+  // weather_body.classList.remove("hidden");
 };
 curPosition();
 
@@ -130,6 +133,8 @@ const getResults = function (location) {
       wind.innerHTML = data.wind.speed + " m/s";
       img.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
       forecast.innerHTML = data.weather[0].description;
+
+      weather_body.classList.remove("hidden");
     })
     .catch((err) => {
       renderError();
