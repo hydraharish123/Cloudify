@@ -74,7 +74,7 @@ const curPosition = function () {
         });
     },
     (err) => {
-      renderError();
+      renderError("Current location not enabled");
     }
   );
 
@@ -87,7 +87,7 @@ searchbtn.addEventListener("click", function () {
   // console.log(location);
   if (!location) {
     getTime();
-    renderError();
+    renderError("Country not found");
   }
 
   getTime();
@@ -97,8 +97,8 @@ searchbtn.addEventListener("click", function () {
   inputplace.value = "";
 });
 
-const renderError = function () {
-  cur_place.innerHTML = "Country Not found";
+const renderError = function (errMsg) {
+  cur_place.innerHTML = errMsg;
   cur_temp.innerHTML = "-";
   min_temp.innerHTML = "-";
   max_temp.innerHTML = "-";
@@ -137,7 +137,7 @@ const getResults = function (location) {
       weather_body.classList.remove("hidden");
     })
     .catch((err) => {
-      renderError();
+      renderError("Country Not found");
       console.error("Something went wrong");
     });
 };
