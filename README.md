@@ -18,7 +18,7 @@ Cloudify  provides real-time weather updates and forecasts for any location. It 
 
 ### Live Website
 
-If the website is deployed, simply visit: [https://yourwebsite.com](https://yourwebsite.com)
+If the website is deployed, simply visit: [https://hydraharish123.github.io/Cloudify/](Cloudify)
 
 ## Usage
 
