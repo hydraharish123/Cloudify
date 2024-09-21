@@ -163,3 +163,11 @@ input {
     font-size: 40px;
   }
 }
+
+@media (max-width: 700px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+}
